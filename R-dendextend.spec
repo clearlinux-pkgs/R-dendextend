@@ -4,7 +4,7 @@
 #
 Name     : R-dendextend
 Version  : 1.7.0
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/dendextend_1.7.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dendextend_1.7.0.tar.gz
 Summary  : Extending 'dendrogram' Functionality in R
@@ -12,11 +12,7 @@ Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 Requires: R-circlize
 Requires: R-corrplot
-Requires: R-fpc
-Requires: R-ggplot2
 Requires: R-gplots
-Requires: R-viridis
-Requires: R-whisker
 BuildRequires : R-circlize
 BuildRequires : R-corrplot
 BuildRequires : R-fpc
@@ -40,11 +36,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521270246
+export SOURCE_DATE_EPOCH=1521274445
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521270246
+export SOURCE_DATE_EPOCH=1521274445
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
