@@ -1,2 +1,7 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
+R-fpc
+R-viridis
+R-ggplot2
+R-whisker
+
