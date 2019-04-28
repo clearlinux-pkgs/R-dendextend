@@ -9,6 +9,7 @@ R-diptest
 R-flexmix
 R-gdata
 R-gplots
+R-gridExtra
 R-gtable
 R-gtools
 R-kernlab

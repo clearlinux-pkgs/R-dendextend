@@ -4,32 +4,13 @@
 #
 Name     : R-dendextend
 Version  : 1.10.0
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/dendextend_1.10.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dendextend_1.10.0.tar.gz
 Summary  : Extending 'dendrogram' Functionality in R
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-GlobalOptions
-Requires: R-bitops
-Requires: R-caTools
-Requires: R-flexmix
-Requires: R-gdata
-Requires: R-gtable
-Requires: R-gtools
-Requires: R-kernlab
-Requires: R-labeling
-Requires: R-lazyeval
-Requires: R-mclust
-Requires: R-munsell
-Requires: R-mvtnorm
-Requires: R-plyr
-Requires: R-prabclus
-Requires: R-robustbase
-Requires: R-scales
-Requires: R-shape
-Requires: R-tibble
-Requires: R-trimcluster
+Requires: R-gridExtra
 BuildRequires : R-DEoptimR
 BuildRequires : R-GlobalOptions
 BuildRequires : R-bitops
@@ -42,6 +23,7 @@ BuildRequires : R-fpc
 BuildRequires : R-gdata
 BuildRequires : R-ggplot2
 BuildRequires : R-gplots
+BuildRequires : R-gridExtra
 BuildRequires : R-gtable
 BuildRequires : R-gtools
 BuildRequires : R-kernlab
@@ -78,10 +60,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552907228
+export SOURCE_DATE_EPOCH=1556470930
 
 %install
-export SOURCE_DATE_EPOCH=1552907228
+export SOURCE_DATE_EPOCH=1556470930
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -117,7 +99,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  dendextend || :
+R CMD check --no-manual --no-examples --no-codoc dendextend || :
 
 
 %files
