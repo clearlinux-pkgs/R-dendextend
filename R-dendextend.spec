@@ -4,18 +4,38 @@
 #
 Name     : R-dendextend
 Version  : 1.12.0
-Release  : 30
+Release  : 31
 URL      : https://cran.r-project.org/src/contrib/dendextend_1.12.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dendextend_1.12.0.tar.gz
 Summary  : Extending 'dendrogram' Functionality in R
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
+Requires: R-bitops
+Requires: R-caTools
+Requires: R-circlize
+Requires: R-corrplot
+Requires: R-gdata
+Requires: R-ggplot2
+Requires: R-gplots
 Requires: R-gridExtra
+Requires: R-gtools
+Requires: R-magrittr
+Requires: R-munsell
 Requires: R-profdpm
 Requires: R-pvclust
+Requires: R-viridis
+BuildRequires : R-bitops
+BuildRequires : R-caTools
+BuildRequires : R-circlize
+BuildRequires : R-corrplot
 BuildRequires : R-fpc
+BuildRequires : R-gdata
 BuildRequires : R-ggplot2
+BuildRequires : R-gplots
 BuildRequires : R-gridExtra
+BuildRequires : R-gtools
+BuildRequires : R-magrittr
+BuildRequires : R-munsell
 BuildRequires : R-profdpm
 BuildRequires : R-pvclust
 BuildRequires : R-viridis
@@ -23,9 +43,10 @@ BuildRequires : R-whisker
 BuildRequires : buildreq-R
 
 %description
-[![Build Status](https://travis-ci.org/talgalili/dendextend.png?branch=master)](https://travis-ci.org/talgalili/dendextend)
-[![codecov.io](https://codecov.io/github/talgalili/dendextend/coverage.svg?branch=master)](https://codecov.io/github/talgalili/dendextend?branch=master)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/dendextend)](https://cran.r-project.org/package=dendextend)
+'dendrogram' objects in R, letting you visualize and compare trees of
+    'hierarchical clusterings'. You can (1) Adjust a tree's graphical parameters
+    - the color, size, type, etc of its branches, nodes and labels. (2)
+    Visually and statistically compare different 'dendrograms' to one another.
 
 %prep
 %setup -q -c -n dendextend
@@ -34,13 +55,13 @@ BuildRequires : buildreq-R
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1557587641
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562196232
 
 %install
-export SOURCE_DATE_EPOCH=1557587641
+export SOURCE_DATE_EPOCH=1562196232
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -69,7 +90,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
