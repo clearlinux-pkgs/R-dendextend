@@ -1,8 +1,9 @@
-1.12.0
+1.13.2
 R-bitops
 R-caTools
 R-circlize
 R-corrplot
+R-dynamicTreeCut
 R-gdata
 R-gplots
 R-gridExtra
