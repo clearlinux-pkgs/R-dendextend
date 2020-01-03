@@ -4,7 +4,7 @@
 #
 Name     : R-dendextend
 Version  : 1.13.2
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/dendextend_1.13.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dendextend_1.13.2.tar.gz
 Summary  : Extending 'dendrogram' Functionality in R
