@@ -1,14 +1,7 @@
-1.13.2
-R-bitops
-R-caTools
+1.13.3
 R-circlize
 R-corrplot
 R-dynamicTreeCut
-R-gdata
 R-gplots
-R-gridExtra
-R-gtools
-R-munsell
 R-profdpm
 R-pvclust
-util-linux
