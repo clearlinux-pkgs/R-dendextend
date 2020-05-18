@@ -4,7 +4,7 @@
 #
 Name     : R-dendextend
 Version  : 1.13.4
-Release  : 40
+Release  : 41
 URL      : https://cran.r-project.org/src/contrib/dendextend_1.13.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dendextend_1.13.4.tar.gz
 Summary  : Extending 'dendrogram' Functionality in R
@@ -31,27 +31,29 @@ BuildRequires : R-whisker
 BuildRequires : buildreq-R
 
 %description
-[![Build Status](https://travis-ci.org/talgalili/dendextend.png?branch=master)](https://travis-ci.org/talgalili/dendextend)
-[![codecov.io](https://codecov.io/github/talgalili/dendextend/coverage.svg?branch=master)](https://codecov.io/github/talgalili/dendextend?branch=master)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/dendextend)](https://cran.r-project.org/package=dendextend)
+'dendrogram' objects in R, letting you visualize and compare trees of
+    'hierarchical clusterings'. You can (1) Adjust a tree's graphical parameters
+    - the color, size, type, etc of its branches, nodes and labels. (2)
+    Visually and statistically compare different 'dendrograms' to one another.
 
 %prep
 %setup -q -c -n dendextend
+cd %{_builddir}/dendextend
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583164762
+export SOURCE_DATE_EPOCH=1589787906
 
 %install
-export SOURCE_DATE_EPOCH=1583164762
+export SOURCE_DATE_EPOCH=1589787906
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
