@@ -4,7 +4,7 @@
 #
 Name     : R-dendextend
 Version  : 1.15.2
-Release  : 56
+Release  : 57
 URL      : https://cran.r-project.org/src/contrib/dendextend_1.15.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/dendextend_1.15.2.tar.gz
 Summary  : Extending 'dendrogram' Functionality in R
@@ -36,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635432543
+export SOURCE_DATE_EPOCH=1640998487
 
 %install
-export SOURCE_DATE_EPOCH=1635432543
+export SOURCE_DATE_EPOCH=1640998487
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
