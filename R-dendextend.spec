@@ -6,20 +6,21 @@
 # autospec commit: 5424026
 #
 Name     : R-dendextend
-Version  : 1.18.1
-Release  : 71
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/dendextend_1.18.1.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/dendextend_1.18.1.tar.gz
+Version  : 1.19.0
+Release  : 72
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/dendextend_1.19.0.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/dendextend_1.19.0.tar.gz
 Summary  : Extending 'dendrogram' Functionality in R
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 Requires: R-ggplot2
 Requires: R-magrittr
 Requires: R-viridis
+BuildRequires : R-ape
+BuildRequires : R-data.table
 BuildRequires : R-fpc
 BuildRequires : R-ggplot2
 BuildRequires : R-magrittr
-BuildRequires : R-pvclust
 BuildRequires : R-viridis
 BuildRequires : R-whisker
 BuildRequires : buildreq-R
@@ -47,10 +48,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1731638968
+export SOURCE_DATE_EPOCH=1732054804
 
 %install
-export SOURCE_DATE_EPOCH=1731638968
+export SOURCE_DATE_EPOCH=1732054804
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -135,30 +136,53 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/dendextend/html/00Index.html
 /usr/lib64/R/library/dendextend/html/R.css
 /usr/lib64/R/library/dendextend/tests/testthat.R
+/usr/lib64/R/library/dendextend/tests/testthat/Rplots.pdf
+/usr/lib64/R/library/dendextend/tests/testthat/test-Hmisc.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-all.equal.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-attr_access.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-bk_method.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-branches_attr_by.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-circlize.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-color_branches.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-colored_bars.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-colored_dots.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-common_subtrees.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-cor.dendlist.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-cor_bakers_gamma.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-cor_cophenetic.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-cut_lower_fun.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-cutree.dendrogram.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-dendlist.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-depth.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-dist_long.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-distinct_edges.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-entanglement.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-find_dend.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-find_dendrogram.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-find_k.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-general.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-get_nodes_xy.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-get_subdendrograms.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-ggdend.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-ggdendro.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-has_edgePar.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-highlight_branches.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-is.functions.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-labels-assign.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-labels_colors.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-nleaves.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-noded_with_condition.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-prune.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-pvclust_extract.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-rainbow_fun.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-rect.dendrogram.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-rotate.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-sample.dendrogram.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-seriate_dendrogram.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-set.dendrogram.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-stats_imports.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-tanglegram.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-trim.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-unbranch.R
 /usr/lib64/R/library/dendextend/tests/testthat/test-untangle.R
+/usr/lib64/R/library/dendextend/tests/testthat/test-zzz.R
